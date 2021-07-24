@@ -7,6 +7,9 @@ var engine, world;
 var canvas;
 var palyer, playerBase;
 var computer, computerBase;
+var computerArcher,playerArcher;
+var arrow;
+
 
 var arrow;
 
@@ -25,6 +28,7 @@ function setup() {
     120,
     120
   );
+  
 
   computerBase = new ComputerBase(
     width - 300,
@@ -45,7 +49,8 @@ function setup() {
     120
   );
   
-  arrow = new PlayerArrow(playerArcher.body.position.x, playerArcher.body.position.y, 100, 10);
+  //Create an arrow Object
+ arrow = new PlayerArrow(playerArcher.body.position.x,playerArcher.body.position.x,100,10)
   
 }
 
@@ -64,14 +69,19 @@ function draw() {
   playerBase.display();
   player.display();
   
-
+ // arrow.disply();
   computerBase.display();
   computer.display();
   
-  playerArcher.display();
+  //playerArcher.display();
   computerArcher.display()
-  arrow.display()
+  playerArcher.display();
+
+  //Display arrow();
+  arrow.display();
   if(keyCode === 32){
-   arrow.shoot(playerArcher.body.angle);
+    arrow.shoot(playerArcher.body.angle)
   }
+
 }
+
