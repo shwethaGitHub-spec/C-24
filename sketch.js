@@ -50,7 +50,7 @@ function setup() {
   );
   
   //Create an arrow Object
- arrow = new PlayerArrow(playerArcher.body.position.x,playerArcher.body.position.x,100,10)
+ arrow = new PlayerArrow(playerArcher.body.position.x,playerArcher.body.position.y,100,10)
   
 }
 
